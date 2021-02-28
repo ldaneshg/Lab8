@@ -82,14 +82,14 @@ describe('Party Horn Tests', () => {
   it('Honk button disabled when textbox empty', () => {
     cy.get('#volume-number').clear().type(' ');
     cy.get('#honk-btn').then( $el => {
-      expect($el).to.have.attr('disabled', true);
+      expect($el).to.have.attr('disabled', 'disabled');
       }
     );
   });
   it('Honk button disabled when textbox invalid', () => {
     cy.get('#volume-number').clear().type('df');
     cy.get('#honk-btn').then( $el => {
-      expect($el).to.have.attr('disabled', true);
+      expect($el).to.have.attr('disabled', 'disabled');
       }
     );
   });
